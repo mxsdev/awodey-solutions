@@ -25,7 +25,7 @@ Since we define identities in the slice categories as identites on domains, iden
     stack(dir: ltr, spacing: 16pt, 
       diagram(
         $a edge(f, ->) edge("d", g, ->) & c \ b edge("d", h, ->) \ c$,
-        edge((0, 1), "ur", $f'$, "->", label-side: right),
+        edge((0, 1), "ur", $f'$, "->", label-side: right, label-sep: -3pt),
         edge((0, 2), "uur", $f''$, "->", label-side: right),
       ), 
       align(horizon, $|->$),

@@ -147,7 +147,7 @@
       ),
       (
         content:  [
-          Verify the UMP for free categories on graphs, defined as above with arrows being sequences of edges. Specifically, let $cat(C)(G)$ be the free category on the graph $G$, so defined, and $i :  G -> U(cat(C)(G))$ the graph homomorphism taking vertices and edges to themselves, regarded as objects and arrows in $cat(C)(G)$. Show that for any category $cat(D)$ and graph homomorphism $f : G -> U(cat(D))$, there is a unique functor
+          Verify the UMP for free categories on graphs, defined as above with arrows being sequences of edges. Specifically, let $cat(C)(G)$ be the free category on the graph $G$, so defined, and $i :  G -> U(cat(C)(G))$ the graph homomorphism taking vertices and edges to themselves, regarded as objects and arrows in $cat(C)(G)$. Show that for any category $cat(D)$ and graph homomorphism $h : G -> U(cat(D))$, there is a unique functor
 
           $ overline(h) : cat(C)(G) -> cat(D) $
 

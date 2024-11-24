@@ -26,4 +26,4 @@
     {a, b} &|-> 4
   $
 
-  We have clearly exhibited an order preserving function which is also bijective. However, the inverse map is not bijective since in particular $2 <= 3$ but it is not the case that ${a} subset.eq {b}$. 
+  We have clearly exhibited an order preserving function which is also bijective. However, the inverse map is not a morphism since in particular $2 <= 3$ but it is not the case that ${a} subset.eq {b}$. 

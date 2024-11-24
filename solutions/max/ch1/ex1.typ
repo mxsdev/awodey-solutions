@@ -21,7 +21,8 @@
                             = &{tuple(a, d) in A times D | exists c  exists b (tuple(a, b) in R and tuple(b, c) in S and tuple(c, d) in T } \
                             = &{tuple(a, d) in A times D | exists b  exists c (tuple(a, b) in R and tuple(b, c) in S and tuple(c, d) in T } \
                             = &{tuple(a, d) in A times D | exists b   (tuple(a, b) in R and exists c (tuple(b, c) in S and tuple(c, d) in T)) } \
-                            = &{tuple(a, d) in A times D | exists b   (tuple(a, b) in R and tuple(b, d) in T compose S) } = (T compose S) compose R\
+                            = &{tuple(a, d) in A times D | exists b   (tuple(a, b) in R and tuple(b, d) in T compose S) } \
+                            = &(T compose S) compose R\
   $
 
 + $G(f)$ is clearly a subset of $G(A) times G(B) = A times B$, so it suffices to show identities and composition are preserved.
