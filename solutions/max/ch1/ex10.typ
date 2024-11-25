@@ -10,23 +10,54 @@ Doing this for all possible number of nodes, we get:
 
 0. 0 nodes generates the empty category, which has no arrows.
 1. With 1 node our only option is to have no edges, since we can't have a loop, which generates the singleton category.
-2. With 2 nodes our only option is to have a single edge from one node to the other, generating the category of three arrows considered in Problem 1-9(a).
-3. We get just one graph whose free category has 6 arrows:
+2. With 2 nodes our only option is to have four edges from one node to the other:
 
   $
     #diagram(
-      $star \ star edge("u", <-) edge(->)  & star$
+      $star & star$,
+      edge((0, 0), "r", "->", shift: 8pt),
+      edge((0, 0), "r", "->", shift: 3pt),
+      edge((0, 0), "r", "->", shift: -3pt),
+      edge((0, 0), "r", "->", shift: -8pt),
     )
   $
-
-  Its category has 5 arrows directly from the graph, and exactly one additionally from the path from the topmost arrow to the rightmost one.
-
-4. We have the following three graphs on four nodes:
+3. We get three graphs whose free category has 6 arrows:
 
   $
     #align(horizon)[
       #grid(
         columns: (auto, auto, auto),
+        rows: (auto),
+        row-gutter: 16pt,
+        column-gutter: 48pt,
+
+        diagram(
+          $star \ star edge("u", <-) edge(->)  & star$
+        ),
+        
+        diagram(
+          $star \ star  & star$,
+          edge((0, 0), "d", "->"),
+          edge((0, 0), "d", "->", shift: 7.5pt),
+          edge((0, 0), "d", "->", shift: -7.5pt),
+        ),
+
+        diagram(
+          $star \ star  & star$,
+          edge((0, 0), "d", "->", shift: 5pt),
+          edge((0, 0), "d", "->", shift: -5pt),
+          edge((0, 0), "dr", "->"),
+        ),
+      )
+    ]
+  $
+
+4. We have the following four graphs on four nodes:
+
+  $
+    #align(horizon)[
+      #grid(
+        columns: (auto, auto, auto, auto),
         rows: (auto),
         row-gutter: 16pt,
         column-gutter: 48pt,
@@ -39,6 +70,11 @@ Doing this for all possible number of nodes, we get:
         ),
         diagram(
           $star & star \ star edge("u", <-)  & star edge("u", <-)$
+        ),
+        diagram(
+          $star & star \ star & star$,
+          edge((0, 0), "d", "->", shift: -5pt),
+          edge((0, 0), "d", "->", shift: 5pt),
         ),
       )
     ]
