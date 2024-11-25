@@ -21,12 +21,12 @@ Doing this for all possible number of nodes, we get:
       edge((0, 0), "r", "->", shift: -8pt),
     )
   $
-3. We get three graphs whose free category has 6 arrows:
+3. We get four graphs whose free category has 6 arrows:
 
   $
     #align(horizon)[
       #grid(
-        columns: (auto, auto, auto),
+        columns: (auto, auto, auto, auto),
         rows: (auto),
         row-gutter: 16pt,
         column-gutter: 48pt,
@@ -47,6 +47,13 @@ Doing this for all possible number of nodes, we get:
           edge((0, 0), "d", "->", shift: 5pt),
           edge((0, 0), "d", "->", shift: -5pt),
           edge((0, 0), "dr", "->"),
+        ),
+
+        diagram(
+          $star \ star  & star$,
+          edge((0, 0), "d", "<-", shift: 5pt),
+          edge((0, 0), "d", "<-", shift: -5pt),
+          edge((0, 0), "dr", "<-"),
         ),
       )
     ]
