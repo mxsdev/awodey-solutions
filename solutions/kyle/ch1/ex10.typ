@@ -1,1 +1,1 @@
-#image("ex10.png", width:80%)
+#image("ex10.excalidraw.png", width:80%)
