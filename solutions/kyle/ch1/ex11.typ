@@ -31,7 +31,7 @@
 
     To check that $M$ is a functor it suffices to check for preservation of identity and composition. The identity function $1_A$ gets mapped to the identity monoid homomorphism. 
     
-    The composition of two arbitrary functions $g compose f$ is shown in the commutative diagram:
+    The composition of two arbitrary functions $g^* compose f^*$ is shown in the commutative diagram:
 
     #align(center)[#image("ex11_4.excalidraw.png", width:70%)]
 
