@@ -1,0 +1,1 @@
+#image("ex10.excalidraw.png", width:80%)
