@@ -15,12 +15,14 @@ In a category, isomorphisms between objects are a pair of morphisms between two 
 ))
 
 #align(center)[$
-  1_A = g compose f \
-  1_B = f compose g \
+  1_A = g after f \
+  1_B = f after g \
 $]
 
 + In *Sets*, a bijective function has a two sided inverse which composes to form the two identities on sets, so it is an isomorphism.
 
-+ In *Monoids*, bijective homomorphisms are called isomorphisms, and they have the property that their composition maps each element in the monoid to itself, so this is the identity morphism.
++ Our goal is to show that in $Monoid$, a morphism is iso iff it is bijective on sets.
+  - $arrow$ Let $phi: A to B$ be an iso morphism. That is, it has a two sided inverse $psi$ such that $psi after phi = 1_A$ and $phi after psi = 1_B$. To be an inverse on monoids, it must be a bijection on the underlying sets.
+  - $arrow.l$ Let $phi: A to B$ be a bijective monoid homomorphism.  Define $psi: B to A$ to be a map which sends $psi: phi(a) mapsto a$. Since $phi$ is a bijection on sets, this is well defined. To prove that it is also a monoid homomorphism, observe that it sends identities to identities, since $phi(e_A) = e_B$, so $psi: e_B mapsto e_A.$ To show it satisfies the homomorphism property, observe that $psi(phi(a_1) after phi(a_2)) = psi(phi(a_1 after a_2)) = a_1 after a_2 = psi(phi(a_1)) after psi(phi(a_2)).$ So indeed, $psi$ is a homomorphism, so it exists as a morphism in $Monoid$. To show that $psi$ is the two-sided inverse of $phi$, observe that $psi after phi (a) = psi(phi(a)) = a$, and $phi after psi (phi(a)) = phi(psi(phi(a))) = phi(a)$.  Since there exists a two sided inverse, $phi$ is an isomorphism.
 
-+ In *Posets*, suppose we have two posets A and B, both containing the same elements ${c, d}$, but in $A$, $c <= d$ whereas in $B$, $d <= c$. Now a function which maps each element onto itself is a bijection, but it violates the ordering, so is not a morphism, which in *Posets* must be order preserving. In general, the isomorphisms in *Posets* are bijections on their sets, but the converse is false.
++ In $Poset$, suppose we have two posets A and B, both containing the same elements ${c, d}$, but in $A$ there is no relation between $c$ and $d$, whereas in $B$, $c <= d$. Define a functor $F$ which maps each element to itself. This is clearly bijective on sets. It is a homomorphism, because it preserves the existing relations $c <= c$ and $d <= d$. However, $F$ has no inverse, since the relation $c <= d$ must be mapped to $Hom_A (c, d)$, which is empty. Since we have a bijective homomorphism with no inverse in $Poset$, the isomorphisms are not the same as the bijective homomorphisms.
