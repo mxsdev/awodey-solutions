@@ -1,0 +1,1 @@
+#image("ex9.png", width:80%)

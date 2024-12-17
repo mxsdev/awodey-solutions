@@ -23,3 +23,7 @@
 #let mor = $op("mor")$
 
 #let Hom = $op("Hom")$
+
+#let to = $arrow$
+#let after = $compose$
+#let mapsto = $|->$
